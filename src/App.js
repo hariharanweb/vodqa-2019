@@ -1,10 +1,17 @@
 import React from 'react';
-import Login from './components/Login';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './reducers';
+import LoginContainer from './containers/LoginContainer';
 
-function App() {
+const store = createStore(reducer);
+
+const App = () => {
     return (
-        <Login />
+        <Provider store={store}>
+            <LoginContainer />
+        </Provider>
     );
-}
+};
 
 export default App;
