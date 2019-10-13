@@ -1,4 +1,4 @@
-import { LOGIN_FAIL } from './LoginActions';
+import { LOGIN_FAIL, LOGIN_SUCCESS } from './LoginActions';
 
 const initialState = {
     errorMessage: ''
@@ -10,6 +10,11 @@ const loginReducer = (state=initialState, action) => {
         return {
             ...state,
             errorMessage: action.message
+        };
+    case LOGIN_SUCCESS: 
+        return {
+            ...state,
+            errorMessage: ''
         };
     default:
         break;

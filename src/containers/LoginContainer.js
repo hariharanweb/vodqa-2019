@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Login from '../components/Login';
-import { LOGIN_FAIL } from '../reducers/LoginActions';
+import { LOGIN_FAIL, LOGIN_SUCCESS } from '../reducers/LoginActions';
+import { navigate } from '@reach/router';
 
 const mapStateToProps = state => ({
     errorMessage: state.loginReducer.errorMessage
@@ -24,6 +25,13 @@ const mapDispatchToProps = dispatch => ({
                 type: LOGIN_FAIL,
                 message: 'Wrong password'
             });
+        else {
+            dispatch({
+                type: LOGIN_SUCCESS
+            });
+            navigate('/schedule');
+        }
+            
     }
 });
   
