@@ -18,7 +18,7 @@ const Login = ({onLogin, errorMessage}) => {
                 </label>
             </div>
             <div>
-                <button onClick={() => onLogin({username, password})}>Login</button>
+                <button id='submit' onClick={() => onLogin({username, password})}>Login</button>
             </div>
             <div>
                 {errorMessage}
