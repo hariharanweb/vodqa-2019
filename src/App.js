@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router } from '@reach/router';
 import reducer from './reducers';
 import LoginContainer from './containers/LoginContainer';
-import Schedule from './components/Schedule';
+import ScheduleContainer from './containers/ScheduleContainer';
 // import { Router, BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -12,11 +12,11 @@ const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window
 export const AppRouter = () => {
     return (
         <Router>
-                <LoginContainer path="/" />
-                <Schedule path="/schedule" />
+            <LoginContainer path="/" />
+            <ScheduleContainer path="/schedule" />
         </Router>
-    )
-}
+    );
+};
 
 const App = () => {
     return (

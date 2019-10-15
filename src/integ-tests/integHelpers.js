@@ -3,8 +3,6 @@ import { createStore } from 'redux';
 import { mount } from 'enzyme';
 import React from 'react';
 import { Provider } from 'react-redux';
-import LoginContainer from '../containers/LoginContainer';
-import { Router, BrowserRouter } from 'react-router-dom';
 import { AppRouter } from '../App';
 
 const initialState = {};

@@ -22,4 +22,4 @@ describe('Sample test', () => {
         await waitForElementToAppear(component,'#header');
         expect(component.find('#header').text()).toContain('2019');
     });
-})
+});

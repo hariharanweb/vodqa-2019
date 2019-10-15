@@ -19,7 +19,9 @@ module.exports = {
         'react'
     ],
     'globals': {
-        'it': true
+        'it': true,
+        'describe': true,
+        'expect': true
     },
     "settings": {
         "react": {
