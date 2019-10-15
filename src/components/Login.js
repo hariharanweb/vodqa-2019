@@ -9,16 +9,16 @@ const Login = ({onLogin, errorMessage}) => {
             Welcome to VodQA
             <div>
                 <label>Username: 
-                    <input type="text" onChange={(event)=> setUsername(event.target.value)}/>
+                    <input id='username' type="text" onChange={(event)=> setUsername(event.target.value)}/>
                 </label>
             </div>
             <div>
                 <label>Password: 
-                    <input type="password" onChange={(event)=> setPassword(event.target.value)}/>
+                    <input id='password' type="password" onChange={(event)=> setPassword(event.target.value)}/>
                 </label>
             </div>
             <div>
-                <button onClick={() => onLogin({username, password})}>Login</button>
+                <button id='submit' onClick={() => onLogin({username, password})}>Login</button>
             </div>
             <div>
                 {errorMessage}
