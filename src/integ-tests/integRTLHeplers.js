@@ -7,13 +7,13 @@ import {
     createMemorySource,
     LocationProvider,
 } from '@reach/router';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { AppRouter } from '../App';
 
 function provide() {
     return <Provider store={createReduxStore()}>
         <AppRouter />
-    </Provider>
+    </Provider>;
 }
 
 export function renderWithRouter(ui = provide,

@@ -1,5 +1,5 @@
 import { fireEvent } from '@testing-library/react';
-import { renderWithRouter, customfireEvent } from './integRTLHeplers';
+import { renderWithRouter } from './integRTLHeplers';
 
 describe('Sample test', () => {
     it('Validate the login Button Text', async () => {
