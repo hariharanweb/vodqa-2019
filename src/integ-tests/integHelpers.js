@@ -42,7 +42,7 @@ export const waitForElementToAppear = async (wrapperComponent, elementSelector) 
     const result = await waitUntil(elementFoundCondition, elementFinder);
 
     if (!result) {
-        console.log(elementSelector , ': Element not found');
+        console.log(elementSelector, ': Element not found');
         throw new Error(`Element not found: ${elementSelector}`);
     }
     return result;
